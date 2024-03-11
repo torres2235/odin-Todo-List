@@ -1,5 +1,5 @@
 export class todoItem {
-    constructor(title, desc, due, priority, note, checkList) {
+    constructor(title, desc, due, priority , note, checkList) {
         this.title = title;
         this.desc = desc;
         this.due = due;
@@ -10,7 +10,12 @@ export class todoItem {
 }
 
 
+export default function createTodo(project, title, desc = "", due = "", priority = "", note = "", checkList = "") {
+    let newItem = new todoItem(title, desc, due, priority, note, checkList);
 
-export default function todoFunc() {
-    console.log("todo function");
+    //we include the project so we can push the todos into it
+    project.todoList.push(newItem);
+
+    console.log(project);
+    return newItem;
 }

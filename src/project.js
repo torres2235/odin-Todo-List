@@ -1,13 +1,16 @@
-import {todoItem} from "./todo";
+import createTodo from "./todo";
 
 class projectItem {
-    constructor(todoItem) {
-        this.todoItem = todoItem;
+    constructor(title) {
+        this.title = title;
     }
-}
+
+    todoList = []; //list that holds our todos
+};
 
 
+export default function createProject(title) {
+    let project = new projectItem(title);
 
-export default function projectFunc() {
-    console.log("project function");
-}
+    return project;
+};

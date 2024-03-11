@@ -1,8 +1,11 @@
-import projectFunc from "./project.js";
-import todoFunc from "./todo.js";
+import createProject from "./project.js";
+import createTodo from "./todo.js";
 
 import './style.css';
 
-console.log("index.js load");
-todoFunc();
-projectFunc();
+//create default project
+let defaultProject = createProject("Default");
+
+//load 2 todos into the project
+createTodo(defaultProject, "Create a Todo");
+createTodo(defaultProject, "Create a New Project");
