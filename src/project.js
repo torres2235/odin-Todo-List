@@ -1,11 +1,9 @@
-import createTodo from "./todo";
-
 class projectItem {
     constructor(title) {
         this.title = title;
     }
 
-    todoList = []; //list that holds our todos
+    todoList = []; //array that holds our todos
 };
 
 
