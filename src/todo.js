@@ -11,14 +11,14 @@ export class todoItem {
 
 
 export default function createTodo(project, title, desc = "", due = "", priority = "", note = "", checkList = "") {
-    let newItem = new todoItem(title, desc, due, priority, note, checkList);
+    let newTodo = new todoItem(title, desc, due, priority, note, checkList);
 
     //we include the project so we can push the todos into it
-    addTodoToProject(project, newItem);
+    addTodoToProject(project, newTodo);
 
-    return newItem;
+    return newTodo;
 }
 
-function addTodoToProject(project, newItem) {
-    project.todoList.push(newItem);
+function addTodoToProject(project, newTodo) {
+    project.todoList.push(newTodo);
 }
