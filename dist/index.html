@@ -28,17 +28,28 @@
         </main>
     </div>
 
-    <div class="modal" id="modal">
+    <div class="modal" id="addTodoModal">
         <div class="modal-header">
-            <div class="modal-title">New Project</div>
+            <div class="modal-title">New Task</div>
             <button data-close-button class="modal-close">&times;</button>
         </div>
-
         <div class="modal-body">
             <form>
                 <div>
-                    <label for="project">Title</label>
-                    <input type="text" name="project" id="project" required>
+                    <label for="task">Task</label>
+                    <input type="text" name="task" id="task" required>
+                </div>
+                <div>
+                    <label for="desc">Description</label>
+                    <input type="text" name="desc" id="desc">
+                </div>
+                <div>
+                    <label for="due">Due</label>
+                    <input type="text" name="due" id="due">
+                </div>
+                <div>
+                    <label for="prio">Priority</label>
+                    <input type="text" name="prio" id="prio">
                 </div>
                 <button type='submit' id='submit'>Submit</button>
             </form>
@@ -46,6 +57,7 @@
     </div>
 
     <div id="overlay"></div>
+
     <script src="main.js"></script>
 </body>
 </html>

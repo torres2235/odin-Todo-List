@@ -1,6 +1,15 @@
+import todoButtonLogic from "./todoButtonLogic";
+
 export default function displayProject(project) {
     const mainContent = document.querySelector('main');
     const todos = document.querySelector('.todoCard');
+
+    //clear current content
+    while (todos.firstChild) {
+        todos.removeChild(todos.lastChild);
+        console.log('clearing item...');
+    };
+
     const newTodoBtn = document.createElement('button');
     newTodoBtn.classList.add('newTodoBtn');
     newTodoBtn.textContent = 'Add Task +';
@@ -21,7 +30,7 @@ export default function displayProject(project) {
 
     //makes new todo button clickable
     newTodoBtn.addEventListener('click', () => {
-        console.log('clicked new todo btn');
+        todoButtonLogic(project);
     });
 
     console.log("displayProject function");

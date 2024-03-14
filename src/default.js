@@ -4,9 +4,12 @@ import displayProject from "./displayProject";
 
 export default function defaultStart() {
     let defaultProject = createProject("Personal");
+    createTodo(defaultProject, "Create new Todo Item");
+    createTodo(defaultProject, "Create new Project Item");
 
-    let todo1 = createTodo(defaultProject, "Create new Todo Item");
-    let todo2 = createTodo(defaultProject, "Create new Project Item");
+    let defaultProject2 = createProject("Work");
+    createTodo(defaultProject2, "tester");
+    createTodo(defaultProject2, "tester2");
 
     console.log(defaultProject);
 
