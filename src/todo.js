@@ -1,14 +1,11 @@
-export class todoItem {
-    constructor(title, desc, due, priority , note, checkList) {
-        this.title = title;
-        this.desc = desc;
-        this.due = due;
-        this.priority = priority;
-        this.note = note;
-        this.checkList = checkList;
-    }
+function todoItem(title, desc, due, priority , note, checkList) {
+    this.title = title;
+    this.desc = desc;
+    this.due = due;
+    this.priority = priority;
+    this.note = note;
+    this.checkList = checkList;
 }
-
 
 export default function createTodo(project, title, desc = "", due = "", priority = "", note = "", checkList = "") {
     let newTodo = new todoItem(title, desc, due, priority, note, checkList);

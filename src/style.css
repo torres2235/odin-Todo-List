@@ -28,9 +28,14 @@ body {
     border-bottom: 1px solid #9ca3af;
 }
 
+.project {
+    color: cyan;
+}
+
 #content {
     width: 100%;
     display: flex;
+    background-color: #bfdbfe;
 }
 
 header {
@@ -42,4 +47,14 @@ header {
     font-size: 45px;
     font-weight: bold;
     padding: 10px;
+}
+
+.todoCard {
+    background-color: aliceblue;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+main {
+    padding: 15px;
 }

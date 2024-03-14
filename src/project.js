@@ -1,9 +1,8 @@
-class projectItem {
-    constructor(title) {
-        this.title = title;
-    }
+export function projectItem(title) {
+    this.title = title;
+    let todoList = []; //array that holds our todos
 
-    todoList = []; //array that holds our todos
+    return {title, todoList};
 };
 
 
@@ -15,13 +14,13 @@ export default function createProject(title) {
     return project;
 };
 
-
 //adds project to UI
 function addProject(project) {
     const projects = document.getElementById("projectsNav");
+    const btn = document.getElementById("newProjBtn");
     const newProject = document.createElement('div');
     newProject.classList.add("project");
 
     newProject.textContent = project.title;
-    projects.appendChild(newProject);
+    projects.insertBefore(newProject, btn);
 };

@@ -1,30 +1,29 @@
 import createProject from "./project.js";
-import createTodo from "./todo.js";
+import createTodo, {todo1, todo2} from "./todo.js";
+import displayProject from "./displayProject.js";
+import defaultStart from "./default.js";
 
 import './style.css';
 
-const projects = document.getElementById("projectsNav");
+//main sidebar nav buttons
+const allBtn = document.getElementById("newProjBtn");
+const todayBtn = document.getElementById('today');
+const starredBtn = document.getElementById('starred');
+const finisehdBtn = document.getElementById('finished');
+
+//projects sidebar nav buttons
 const todos = document.getElementsByName("main");
+let projects = document.getElementsByClassName("project");
+const projBtn = document.getElementById("newProjBtn");
 
-//create default project
-let defaultProject = createProject("Personal");
+defaultStart();
 
-//load 2 todos into the project
-createTodo(
-    defaultProject, 
-    "Create a Todo",
-    "Create a new Todo item in your project",
-    "Today",
-    "low",
-    "you can skip this if you want",
-    false
-);
-createTodo(
-    defaultProject, 
-    "Create a Project",
-    "Create a new Project item",
-    "Today",
-    "low",
-    "you can skip this if you want",
-    false
-);
+Array.from(projects).forEach(function(project) {
+    project.addEventListener('click', () => {
+        console.log(project);
+    });
+  });
+
+projBtn.addEventListener('click', () => {
+    console.log("You clicked a button");
+});
