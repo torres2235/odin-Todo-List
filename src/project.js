@@ -1,3 +1,5 @@
+import displayProject from "./displayProject";
+
 export function projectItem(title) {
     this.title = title;
     let todoList = []; //array that holds our todos
@@ -23,4 +25,10 @@ function addProject(project) {
 
     newProject.textContent = project.title;
     projects.insertBefore(newProject, btn);
+
+    //click functionality for the project
+    newProject.addEventListener('click', () => {
+        console.log('displaying this project...');
+        displayProject(project);
+    });
 };

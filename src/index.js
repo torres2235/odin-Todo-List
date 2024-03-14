@@ -18,12 +18,6 @@ const projBtn = document.getElementById("newProjBtn");
 
 defaultStart();
 
-Array.from(projects).forEach(function(project) {
-    project.addEventListener('click', () => {
-        console.log(project);
-    });
-  });
-
 projBtn.addEventListener('click', () => {
     console.log("You clicked a button");
 });

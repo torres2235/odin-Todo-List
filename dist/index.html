@@ -27,6 +27,25 @@
             <div class="todoCard"></div>
         </main>
     </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <div class="modal-title">New Project</div>
+            <button data-close-button class="modal-close">&times;</button>
+        </div>
+
+        <div class="modal-body">
+            <form>
+                <div>
+                    <label for="project">Title</label>
+                    <input type="text" name="project" id="project" required>
+                </div>
+                <button type='submit' id='submit'>Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="overlay"></div>
     <script src="main.js"></script>
 </body>
 </html>

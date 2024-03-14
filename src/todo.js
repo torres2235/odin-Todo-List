@@ -1,14 +1,12 @@
-function todoItem(title, desc, due, priority , note, checkList) {
+function todoItem(title, desc, due, priority) {
     this.title = title;
     this.desc = desc;
     this.due = due;
     this.priority = priority;
-    this.note = note;
-    this.checkList = checkList;
 }
 
-export default function createTodo(project, title, desc = "", due = "", priority = "", note = "", checkList = "") {
-    let newTodo = new todoItem(title, desc, due, priority, note, checkList);
+export default function createTodo(project, title, desc = "", due = "", priority = "") {
+    let newTodo = new todoItem(title, desc, due, priority);
 
     //we include the project so we can push the todos into it
     addTodoToProject(project, newTodo);
