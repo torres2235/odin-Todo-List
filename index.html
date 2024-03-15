@@ -28,6 +28,7 @@
         </main>
     </div>
 
+    <!--Modal for adding new tasks-->
     <div class="modal" id="addTodoModal">
         <div class="modal-header">
             <div class="modal-title">New Task</div>
@@ -56,6 +57,24 @@
         </div>
     </div>
 
+    <!--Modal for adding new projects-->
+    <div class="modal" id="addProjectModal">
+        <div class="modal-header">
+            <div class="modal-title">New Project</div>
+            <button data-close-button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div>
+                    <label for="task">Project Title</label>
+                    <input type="text" name="project" id="project" required>
+                </div>
+
+                <button type='submit' id='submit'>Submit</button>
+            </form>
+        </div>
+    </div>
+    
     <div id="overlay"></div>
 
     <script src="main.js"></script>
