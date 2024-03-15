@@ -1,7 +1,5 @@
-import createProject from "./project.js";
-import createTodo, {todo1, todo2} from "./todo.js";
-import displayProject from "./displayProject.js";
 import defaultStart from "./default.js";
+import newProjectButtonLogic from "../newProjectButtonLogic.js";
 
 import './style.css';
 
@@ -19,5 +17,5 @@ const projBtn = document.getElementById("newProjBtn");
 defaultStart();
 
 projBtn.addEventListener('click', () => {
-    console.log("You clicked a button");
+    newProjectButtonLogic();
 });

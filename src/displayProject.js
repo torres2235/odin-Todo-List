@@ -1,4 +1,4 @@
-import todoButtonLogic from "./todoButtonLogic";
+import addTaskButtonLogic from "./addTaskButtonLogic";
 
 export default function displayProject(project) {
     const mainContent = document.querySelector('main');
@@ -30,7 +30,7 @@ export default function displayProject(project) {
 
     //makes new todo button clickable
     newTodoBtn.addEventListener('click', () => {
-        todoButtonLogic(project);
+        addTaskButtonLogic(project);
     });
 
     console.log("displayProject function");
