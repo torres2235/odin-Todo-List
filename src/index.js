@@ -1,5 +1,5 @@
 import defaultStart from "./default.js";
-import newProjectButtonLogic from "../newProjectButtonLogic.js";
+import newProjectButtonLogic from "./newProjectButtonLogic.js";
 
 import './style.css';
 

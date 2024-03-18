@@ -1,8 +1,8 @@
 import openModal from "./openModal";
 import closeModal from "./closeModal";
 
-export default function addTaskButtonLogic(project) {
-    const modal = document.getElementById('addTodoModal');
+export default function newProjectButtonLogic() {
+    const modal = document.getElementById('addProjectModal');
     openModal(modal);
 
     const closeModalBtn = document.querySelectorAll('[data-close-button]');
