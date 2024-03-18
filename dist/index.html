@@ -37,22 +37,25 @@
         <div class="modal-body">
             <form>
                 <div>
-                    <label for="task">Task</label>
-                    <input type="text" name="task" id="task" required>
+                    <input type="text" name="task" id="task" placeholder="Task" required>
                 </div>
                 <div>
-                    <label for="desc">Description</label>
-                    <input type="text" name="desc" id="desc">
+                    <textarea type="text" name="desc" id="desc" placeholder="Description"></textarea>
                 </div>
                 <div>
-                    <label for="due">Due</label>
-                    <input type="text" name="due" id="due">
+                    <label for="Due">Due:</label>
+                    <input type="date" name="due" id="due">
                 </div>
                 <div>
-                    <label for="prio">Priority</label>
-                    <input type="text" name="prio" id="prio">
+                    <label for="prio">Priority:</label>
+                    <select type="text" name="prio" id="prio">
+                        <option value="">None</option>
+                        <option value="low">Low </option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
                 </div>
-                <button type='submit' id='submit'>Submit</button>
+                <button type='submit' id='taskSubmit'>Submit</button>
             </form>
         </div>
     </div>
@@ -66,11 +69,10 @@
         <div class="modal-body">
             <form>
                 <div>
-                    <label for="task">Project Title</label>
-                    <input type="text" name="project" id="project" required>
+                    <input type="text" name="project" id="project" placeholder="Project Title" required>
                 </div>
 
-                <button type='submit' id='submit'>Submit</button>
+                <button type='submit' id='projectSubmit'>Submit</button>
             </form>
         </div>
     </div>
