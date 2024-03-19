@@ -27,55 +27,6 @@
             <div class="todoCard"></div>
         </main>
     </div>
-
-    <!--Modal for adding new tasks-->
-    <div class="modal" id="addTodoModal">
-        <div class="modal-header">
-            <div class="modal-title">New Task</div>
-            <button data-close-button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-            <form>
-                <div>
-                    <input type="text" name="task" id="task" placeholder="Task" required>
-                </div>
-                <div>
-                    <textarea type="text" name="desc" id="desc" placeholder="Description"></textarea>
-                </div>
-                <div>
-                    <label for="Due">Due:</label>
-                    <input type="date" name="due" id="due">
-                </div>
-                <div>
-                    <label for="prio">Priority:</label>
-                    <select type="text" name="prio" id="prio">
-                        <option value="">None</option>
-                        <option value="low">Low </option>
-                        <option value="medium">Medium</option>
-                        <option value="high">High</option>
-                    </select>
-                </div>
-                <button type='submit' id='taskSubmit'>Submit</button>
-            </form>
-        </div>
-    </div>
-
-    <!--Modal for adding new projects-->
-    <div class="modal" id="addProjectModal">
-        <div class="modal-header">
-            <div class="modal-title">New Project</div>
-            <button data-close-button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-            <form>
-                <div>
-                    <input type="text" name="project" id="project" placeholder="Project Title" required>
-                </div>
-
-                <button type='submit' id='projectSubmit'>Submit</button>
-            </form>
-        </div>
-    </div>
     
     <div id="overlay"></div>
 
