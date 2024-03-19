@@ -12,6 +12,7 @@ export default function displayProject(project) {
 
     const newTodoBtn = document.createElement('button');
     newTodoBtn.classList.add('newTodoBtn');
+    newTodoBtn.id = 'newTodoBtn';
     newTodoBtn.textContent = 'Add Task +';
     todos.appendChild(newTodoBtn);
 
@@ -30,7 +31,9 @@ export default function displayProject(project) {
 
     //makes new todo button clickable
     newTodoBtn.addEventListener('click', () => {
+        console.log('btnpressed');
         addTaskButtonLogic(project);
+        return
     });
 
     console.log("displayProject function");

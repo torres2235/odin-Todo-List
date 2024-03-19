@@ -1,10 +1,9 @@
-export default function closeModal(modal){
+export default function closeModal(body, modal){
     if (modal == null) {
         return;
     };
-
     const overlay = document.getElementById('overlay');
-    modal.classList.remove('active');
     overlay.classList.remove('active');
+    const del = body.removeChild(modal);
     console.log('Closing modal...');
 };
