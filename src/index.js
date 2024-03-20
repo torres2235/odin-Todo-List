@@ -1,5 +1,5 @@
 import defaultStart from "./default.js";
-import newProjectButtonLogic from "./newProjectButtonLogic.js";
+import projectModal from "./projectModal.js";
 
 import './style.css';
 
@@ -17,5 +17,5 @@ const projBtn = document.getElementById("newProjBtn");
 defaultStart();
 
 projBtn.addEventListener('click', () => {
-    newProjectButtonLogic();
+    projectModal();
 });

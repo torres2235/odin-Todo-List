@@ -1,9 +1,12 @@
-import addTaskButtonLogic from "./addTaskButtonLogic";
+import todoModal from "./todoModal";
+import todoDetailsModal from "./todoDetails";
 
 export default function displayProject(project) {
-    const mainContent = document.querySelector('main');
-    const todos = document.querySelector('.todoCard');
+    const projTitle = document.querySelector('#projectTitle');
+    const todos = document.querySelector('#todoList');
+    const todoInfo = document.querySelector('#todoDetails');
 
+    projTitle.textContent = project.title;
     //clear current content
     while (todos.firstChild) {
         todos.removeChild(todos.lastChild);
@@ -21,18 +24,16 @@ export default function displayProject(project) {
         item.classList.add('todoItem');
         item.textContent = todo.title;
         todos.insertBefore(item, newTodoBtn);
-        mainContent.appendChild(todos);
 
         //makes todo items clickable
         item.addEventListener('click', () => {
-            console.log('clicked todo item');
+            todoDetailsModal(todo);
         });
     });
 
     //makes new todo button clickable
     newTodoBtn.addEventListener('click', () => {
-        console.log('btnpressed');
-        addTaskButtonLogic(project);
+        todoModal(project);
         return
     });
 
