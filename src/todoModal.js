@@ -66,9 +66,6 @@ export default function todoModal(project){
     const prioSelect = document.createElement('select');
     prioSelect.name = 'prio';
     prioSelect.id = 'prio';
-    const option1 = document.createElement('option');
-    option1.value = '';
-    option1.textContent = 'None';
     const option2 = document.createElement('option');
     option2.value = 'low';
     option2.textContent = 'Low';
@@ -78,7 +75,6 @@ export default function todoModal(project){
     const option4 = document.createElement('option');
     option4.value = 'high';
     option4.textContent = 'High';
-    prioSelect.appendChild(option1);
     prioSelect.appendChild(option2);
     prioSelect.appendChild(option3);
     prioSelect.appendChild(option4);

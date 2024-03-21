@@ -40,7 +40,7 @@ body {
 }
 
 header {
-    background: #1e3a8a;
+    background: #1c1917;
     color: white;
     display: flex;
     justify-content: center;
@@ -57,7 +57,6 @@ header {
     background-color: aliceblue;
 }
 .todoCard {
-    background-color: aliceblue;
     padding: 15px;
     border-radius: 10px;
     width: 95%;
@@ -73,8 +72,28 @@ header {
     gap: 15px;
 }
 
+.todoItem {
+    display: flex;
+    justify-content: space-between;
+}
+
+.itemLeft {
+    display: flex;
+}
+
+.desc {
+    color: gray;
+}
+
+.info,
+.trash {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+}
+
 main {
-    background-image: url("wp5204110.webp");
+    background-image: url("./images/wp5204110.webp");
     background-size: cover;
     padding: 15px;
     width: 100%;
@@ -151,4 +170,10 @@ form {
 
 button {
     background: #1e3a8a;
+}
+
+input,
+textarea,
+select {
+    color: black;
 }
