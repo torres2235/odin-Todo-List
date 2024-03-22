@@ -1,6 +1,7 @@
 import closeModal from "./closeModal";
 import createTodo from "./todo";
 import displayProject from "./displayProject";
+import allTodos from "./allTodos";
 
 export default function todoModal(project){
 
@@ -108,8 +109,13 @@ export default function todoModal(project){
         const prio = document.getElementById('prio');
         console.log('todo made');
         createTodo(project, task.value, desc.value, due.value, prio.value);
-        displayProject(project);
 
+        if(project.title != 'All'){
+            displayProject(project);
+        } else {
+            allTodos();
+        }
+        
         closeModal(body, modal);
     })
 };

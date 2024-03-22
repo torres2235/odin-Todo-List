@@ -1,13 +1,13 @@
 import todoModal from "./todoModal";
 import todoDetailsModal from "./todoDetails";
-import deleteTodo from "./deleteTodo";
+import deleteTodo from "./deleteTodo"; 
 import magnify from './images/magnify-expand.svg';
 import trashcan from './images/trash-can-outline.svg';
+import todoDone from "./todoDone";
 
 export default function displayProject(project) {
     const projTitle = document.querySelector('#projectTitle');
     const todos = document.querySelector('#todoList');
-    const todoInfo = document.querySelector('#todoDetails');
 
     projTitle.textContent = project.title;
     //clear current content
@@ -62,7 +62,15 @@ export default function displayProject(project) {
         item.appendChild(itemRight);
         todos.insertBefore(item, newTodoBtn);
 
-        //makes todo items clickable
+        if(todo.done == 'yes') {
+            box.checked = true;
+            todoDone(project, todo, box, item, task, t, d);
+        }
+
+        box.addEventListener('change', () => {
+            todoDone(project, todo, box, item, task, t, d);
+        });
+
         info.addEventListener('click', () => {
             todoDetailsModal(project, todo);
         });

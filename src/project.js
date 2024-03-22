@@ -1,5 +1,7 @@
 import displayProject from "./displayProject";
 
+let projectList = [];
+
 export function projectItem(title) {
     this.title = title;
     let todoList = []; //array that holds our todos
@@ -11,10 +13,15 @@ export function projectItem(title) {
 export default function createProject(title) {
     let project = new projectItem(title);
 
-    addProject(project);    
+    projectList.push(project);
+    addProject(project);  
 
     return project;
 };
+
+export function getProjects() {
+    return projectList;
+}
 
 //adds project to UI
 function addProject(project) {

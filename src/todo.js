@@ -5,7 +5,7 @@ function todoItem(title, desc, due, priority) {
     this.priority = priority;
 }
 
-export default function createTodo(project, title, desc = "", due = "", priority = "") {
+export default function createTodo(project, title, desc = "", due = "", priority = "", done = 'no') {
     let newTodo = new todoItem(title, desc, due, priority);
 
     //we include the project so we can push the todos into it

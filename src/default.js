@@ -1,6 +1,7 @@
 import createProject from "./project";
 import createTodo from "./todo";
 import displayProject from "./displayProject";
+import {projectItem, getProjects} from './project'
 
 export default function defaultStart() {
     let defaultProject = createProject("Personal");
@@ -11,9 +12,15 @@ export default function defaultStart() {
     createTodo(defaultProject2, "tester");
     createTodo(defaultProject2, "tester2");
 
-    console.log(defaultProject);
-
     displayProject(defaultProject);
 
     return defaultProject;
+}
+
+let allProject = new projectItem('All');
+let projectList = getProjects();
+projectList.push(allProject);
+
+export function getAllProject() {
+    return allProject;
 }

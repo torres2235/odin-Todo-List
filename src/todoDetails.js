@@ -1,5 +1,6 @@
 import closeModal from "./closeModal";
 import displayProject from "./displayProject";
+import allTodos from "./allTodos";
 
 export default function todoDetailsModal(project, todo) {
     console.log('Opening modal...');
@@ -108,7 +109,11 @@ export default function todoDetailsModal(project, todo) {
         todo.desc = desc.value;
         todo.due = dueDate.value;
         todo.priority = prioSelect.value;
-        displayProject(project);
+        if(project.title != 'All'){
+            displayProject(project);
+        } else {
+            allTodos();
+        }
 
         closeModal(body, modal);
     });

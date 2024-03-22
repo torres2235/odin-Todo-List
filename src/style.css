@@ -90,6 +90,8 @@ header {
     width: 20px;
     height: 20px;
     filter: invert(1);
+    color: black;
+    background: url(./images/magnify-expand.svg);
 }
 
 main {
@@ -176,4 +178,10 @@ input,
 textarea,
 select {
     color: black;
+}
+
+.done {
+    background: gray;
+    text-decoration: line-through;
+    opacity: 0.5;
 }
