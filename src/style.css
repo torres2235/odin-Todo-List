@@ -88,7 +88,6 @@ header {
 .todoItem {
     display: flex;
     justify-content: space-between;
-    box-shadow: -2px 0 black;
 }
 
 .itemLeft,
@@ -217,4 +216,12 @@ input {
     text-decoration: line-through;
     opacity: 0.25;
     border-radius: 10px;
+}
+
+.modal-title,
+#project,
+#task,
+#desc,
+#due {
+    width: 100%;
 }
