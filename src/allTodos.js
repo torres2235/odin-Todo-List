@@ -21,7 +21,7 @@ export default function allTodos() {
     while (todos.firstChild) {
         todos.removeChild(todos.lastChild);
         console.log('clearing item...');
-    };
+    }
 
     const newTodoBtn = document.createElement('button');
     newTodoBtn.classList.add('newTodoBtn');

@@ -19,6 +19,7 @@
   "homepage": "https://github.com/torres2235/odin-Todo-List#readme",
   "devDependencies": {
     "css-loader": "^6.10.0",
+    "eslint": "^8.57.0",
     "style-loader": "^3.3.4",
     "url-loader": "^4.1.1",
     "webpack": "^5.90.3",

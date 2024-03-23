@@ -118,4 +118,4 @@ export default function todoModal(project){
         
         closeModal(body, modal);
     })
-};
+}

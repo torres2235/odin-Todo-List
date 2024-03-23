@@ -14,6 +14,6 @@ export default function deleteTodo(project, todo) {
         } else {
             allTodos();
         }
-    };
+    }
 
-};
+}

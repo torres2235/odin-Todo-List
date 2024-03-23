@@ -14,7 +14,7 @@ export default function displayProject(project) {
     while (todos.firstChild) {
         todos.removeChild(todos.lastChild);
         console.log('clearing item...');
-    };
+    }
 
     const newTodoBtn = document.createElement('button');
     newTodoBtn.classList.add('newTodoBtn');
@@ -51,11 +51,13 @@ export default function displayProject(project) {
         info.src = magnify;
         info.alt = 'info';
         const trash = new Image();
-        trash.classList.add('trash');
+        const trashDiv = document.createElement('div');
+        trashDiv.classList.add('trash');
         trash.src = trashcan;
         trash.alt = 'trash';
+        trashDiv.appendChild(trash);
         itemRight.appendChild(info);
-        itemRight.appendChild(trash);
+        itemRight.appendChild(trashDiv);
         
 
         item.appendChild(itemLeft);
@@ -89,4 +91,4 @@ export default function displayProject(project) {
     
 
     console.log("displayProject function");
-};
+}
