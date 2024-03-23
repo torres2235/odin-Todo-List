@@ -47,16 +47,18 @@ export default function displayProject(project) {
         const itemRight = document.createElement('div');
         itemRight.classList.add('itemRight');
         const info = new Image();
-        info.classList.add('info');
+        const infoDiv = document.createElement('div');
+        infoDiv.classList.add('info');
         info.src = magnify;
         info.alt = 'info';
+        infoDiv.appendChild(info);
         const trash = new Image();
         const trashDiv = document.createElement('div');
         trashDiv.classList.add('trash');
         trash.src = trashcan;
         trash.alt = 'trash';
         trashDiv.appendChild(trash);
-        itemRight.appendChild(info);
+        itemRight.appendChild(infoDiv);
         itemRight.appendChild(trashDiv);
         
 
