@@ -6,6 +6,7 @@ import magnify from './images/magnify-expand.svg';
 import trashcan from './images/trash-can-outline.svg';
 import { getAllProject } from "./default";
 import todoDone from "./todoDone";
+import './style.css';
 
 export default function allTodos() {
 

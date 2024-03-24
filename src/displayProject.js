@@ -4,6 +4,7 @@ import deleteTodo from "./deleteTodo";
 import magnify from './images/magnify-expand.svg';
 import trashcan from './images/trash-can-outline.svg';
 import todoDone from "./todoDone";
+import './style.css';
 
 export default function displayProject(project) {
     const projTitle = document.querySelector('#projectTitle');
